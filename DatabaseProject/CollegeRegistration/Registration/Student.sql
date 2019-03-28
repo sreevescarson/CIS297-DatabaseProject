@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Student]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Name] NCHAR(50) NOT NULL, 
+    [MajorID] INT NOT NULL, 
+    CONSTRAINT Student_Major FOREIGN KEY (MajorID) REFERENCES Major(ID)
+)
