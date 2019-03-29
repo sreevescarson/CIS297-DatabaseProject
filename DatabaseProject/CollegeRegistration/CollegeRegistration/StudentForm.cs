@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CollegeRegistration
 {
-    public partial class Form1 : Form
+    public partial class StudentForm : Form
     {
-        public Form1()
+        public StudentForm()
         {
             InitializeComponent();
-        }
-
-        private void AddStudentNameTextbox_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
