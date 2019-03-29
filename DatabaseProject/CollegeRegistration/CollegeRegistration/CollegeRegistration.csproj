@@ -58,6 +58,12 @@
     <Compile Include="Course.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseForm.Designer.cs">
+      <DependentUpon>CourseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enrollment.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
     </Compile>
@@ -70,6 +76,12 @@
     <Compile Include="Faculty.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="FacultyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacultyForm.Designer.cs">
+      <DependentUpon>FacultyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,12 @@
     </Compile>
     <Compile Include="Major.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MajorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorForm.Designer.cs">
+      <DependentUpon>MajorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +122,12 @@
     <Compile Include="Section.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SectionForm.Designer.cs">
+      <DependentUpon>SectionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
     </Compile>
@@ -113,11 +137,17 @@
     <Compile Include="StudentForm.Designer.cs">
       <DependentUpon>StudentForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CourseForm.resx">
+      <DependentUpon>CourseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EnrollmentForm.resx">
       <DependentUpon>EnrollmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorForm.resx">
+      <DependentUpon>MajorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -128,6 +158,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SectionForm.resx">
+      <DependentUpon>SectionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
     </EmbeddedResource>
