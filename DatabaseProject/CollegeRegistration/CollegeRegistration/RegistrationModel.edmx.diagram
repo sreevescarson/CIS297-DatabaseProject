@@ -5,17 +5,17 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="38140cb1fe574f0a83c72562e5a0b79b" Name="Diagram1">
-        <EntityTypeShape EntityType="RegistrationModel.Course" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegistrationModel.Enrollment" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegistrationModel.Faculty" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegistrationModel.Major" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegistrationModel.Section" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegistrationModel.Student" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="RegistrationModel.Enrollment_To_Course" ManuallyRouted="false" />
-        <AssociationConnector Association="RegistrationModel.Section_To_Course" ManuallyRouted="false" />
-        <AssociationConnector Association="RegistrationModel.Enrollment_To_Stude" ManuallyRouted="false" />
-        <AssociationConnector Association="RegistrationModel.Section_To_Faculty" ManuallyRouted="false" />
-        <AssociationConnector Association="RegistrationModel.Student_Major" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RegistrationModel.Course" Width="1.5" PointX="3" PointY="4.875" />
+        <EntityTypeShape EntityType="RegistrationModel.Enrollment" Width="1.5" PointX="5.25" PointY="0.875" />
+        <EntityTypeShape EntityType="RegistrationModel.Faculty" Width="1.5" PointX="3" PointY="8.125" />
+        <EntityTypeShape EntityType="RegistrationModel.Major" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="RegistrationModel.Section" Width="1.5" PointX="5.25" PointY="4.75" />
+        <EntityTypeShape EntityType="RegistrationModel.Student" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="RegistrationModel.Enrollment_To_Course" />
+        <AssociationConnector Association="RegistrationModel.Section_To_Course" />
+        <AssociationConnector Association="RegistrationModel.Enrollment_To_Stude" />
+        <AssociationConnector Association="RegistrationModel.Section_To_Faculty" />
+        <AssociationConnector Association="RegistrationModel.Student_Major" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
