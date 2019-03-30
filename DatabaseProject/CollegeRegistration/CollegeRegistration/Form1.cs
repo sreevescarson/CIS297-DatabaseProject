@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,14 +13,37 @@ namespace CollegeRegistration
 {
     public partial class Form1 : Form
     {
+
+        RegistrationEntities RegistrationEntities;
+
         public Form1()
         {
             InitializeComponent();
+            RegistrationEntities = new RegistrationEntities();
+            
+
         }
 
         private void AddStudentNameTextbox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void EnrollmentListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddStudentButton_Click(object sender, EventArgs e)
+        {
+            Student NewStudent = new Student
+            {
+                Name = "Test",
+                MajorID = 1,
+            };
+
+            RegistrationEntities.Students.Add(NewStudent);
+            RegistrationEntities.SaveChanges();
         }
     }
 }

@@ -5,5 +5,5 @@
     [CourseID] INT NOT NULL, 
     [Grade] NVARCHAR(10) NULL, 
     CONSTRAINT Enrollment_To_Stude FOREIGN KEY (StudentID) REFERENCES Student(ID), 
-    CONSTRAINT Enrollment_To_Course FOREIGN KEY (CourseID) REFERENCES Course(ID)
+    CONSTRAINT Enrollment_To_Course FOREIGN KEY (CourseID) REFERENCES Course(Id)
 )
