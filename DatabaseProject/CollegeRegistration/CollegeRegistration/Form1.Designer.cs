@@ -74,6 +74,7 @@
             this.SectionDayLabel = new System.Windows.Forms.Label();
             this.SectionTimeLabel = new System.Windows.Forms.Label();
             this.SectionSemesterLabel = new System.Windows.Forms.Label();
+            this.ToStudentFormButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // StudentListBox
@@ -465,11 +466,22 @@
             this.SectionSemesterLabel.TabIndex = 45;
             this.SectionSemesterLabel.Text = "Semester";
             // 
+            // ToStudentFormButton
+            // 
+            this.ToStudentFormButton.Location = new System.Drawing.Point(815, 300);
+            this.ToStudentFormButton.Name = "ToStudentFormButton";
+            this.ToStudentFormButton.Size = new System.Drawing.Size(107, 24);
+            this.ToStudentFormButton.TabIndex = 46;
+            this.ToStudentFormButton.Text = "Student Menu";
+            this.ToStudentFormButton.UseVisualStyleBackColor = true;
+            this.ToStudentFormButton.Click += new System.EventHandler(this.ToStudentFormButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1233, 562);
+            this.Controls.Add(this.ToStudentFormButton);
             this.Controls.Add(this.SectionSemesterLabel);
             this.Controls.Add(this.SectionTimeLabel);
             this.Controls.Add(this.SectionDayLabel);
@@ -571,6 +583,7 @@
         private System.Windows.Forms.Label SectionDayLabel;
         private System.Windows.Forms.Label SectionTimeLabel;
         private System.Windows.Forms.Label SectionSemesterLabel;
+        private System.Windows.Forms.Button ToStudentFormButton;
     }
 }
 

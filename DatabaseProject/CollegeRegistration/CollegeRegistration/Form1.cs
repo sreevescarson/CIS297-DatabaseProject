@@ -11,10 +11,11 @@ using System.Windows.Forms;
 
 namespace CollegeRegistration
 {
+
     public partial class Form1 : Form
     {
 
-        RegistrationEntities RegistrationEntities;
+        public RegistrationEntities RegistrationEntities;
 
         public Form1()
         {
@@ -44,6 +45,12 @@ namespace CollegeRegistration
 
             RegistrationEntities.Students.Add(NewStudent);
             RegistrationEntities.SaveChanges();
+        }
+
+        private void ToStudentFormButton_Click(object sender, EventArgs e)
+        {
+            var myForm = new StudentForm(RegistrationEntities);
+            myForm.Show();
         }
     }
 }

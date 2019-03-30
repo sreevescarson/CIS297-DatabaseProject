@@ -146,6 +146,11 @@
     <Compile Include="Student.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="StudentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +211,17 @@
     </EntityDeploy>
     <None Include="RegistrationModel.edmx.diagram">
       <DependentUpon>RegistrationModel.edmx</DependentUpon>
+    </None>
+    <None Include="StudentDataSet.xsc">
+      <DependentUpon>StudentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StudentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudentDataSet.xss">
+      <DependentUpon>StudentDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
