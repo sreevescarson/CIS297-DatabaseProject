@@ -46,5 +46,15 @@ namespace CollegeRegistration
         {
             string FindPerson = textBox1.Text;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveStudentButton_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
