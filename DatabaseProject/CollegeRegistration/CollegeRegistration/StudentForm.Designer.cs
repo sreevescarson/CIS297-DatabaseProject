@@ -30,13 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.majorIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentDataSet = new CollegeRegistration.StudentDataSet();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.registrationDataSet = new CollegeRegistration.RegistrationDataSet();
+            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentDataSet = new CollegeRegistration.StudentDataSet();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.FindStudentButton = new System.Windows.Forms.Button();
             this.SaveStudentButton = new System.Windows.Forms.Button();
@@ -51,11 +48,13 @@
             this.MajorIDInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.majorIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.majorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSetBindingSource)).BeginInit();
@@ -67,46 +66,16 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
             this.majorIDDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.studentBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 11);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 20);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 31;
-            this.dataGridView1.Size = new System.Drawing.Size(344, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(631, 332);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // majorIDDataGridViewTextBoxColumn
-            // 
-            this.majorIDDataGridViewTextBoxColumn.DataPropertyName = "MajorID";
-            this.majorIDDataGridViewTextBoxColumn.HeaderText = "MajorID";
-            this.majorIDDataGridViewTextBoxColumn.Name = "majorIDDataGridViewTextBoxColumn";
-            // 
-            // studentsBindingSource
-            // 
-            this.studentsBindingSource.DataMember = "Students";
-            this.studentsBindingSource.DataSource = this.studentDataSet;
-            // 
-            // studentDataSet
-            // 
-            this.studentDataSet.DataSetName = "StudentDataSet";
-            this.studentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // studentBindingSource
             // 
@@ -119,21 +88,31 @@
             this.registrationDataSet.DataSetName = "RegistrationDataSet";
             this.registrationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // studentsBindingSource
+            // 
+            this.studentsBindingSource.DataMember = "Students";
+            this.studentsBindingSource.DataSource = this.studentDataSet;
+            // 
+            // studentDataSet
+            // 
+            this.studentDataSet.DataSetName = "StudentDataSet";
+            this.studentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(11, 195);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Location = new System.Drawing.Point(20, 360);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 20);
+            this.textBox1.Size = new System.Drawing.Size(462, 29);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "Enter Student Name";
             // 
             // FindStudentButton
             // 
-            this.FindStudentButton.Location = new System.Drawing.Point(269, 195);
-            this.FindStudentButton.Margin = new System.Windows.Forms.Padding(2);
+            this.FindStudentButton.Location = new System.Drawing.Point(493, 360);
+            this.FindStudentButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FindStudentButton.Name = "FindStudentButton";
-            this.FindStudentButton.Size = new System.Drawing.Size(86, 20);
+            this.FindStudentButton.Size = new System.Drawing.Size(158, 37);
             this.FindStudentButton.TabIndex = 2;
             this.FindStudentButton.Text = "Search";
             this.FindStudentButton.UseVisualStyleBackColor = true;
@@ -141,10 +120,10 @@
             // 
             // SaveStudentButton
             // 
-            this.SaveStudentButton.Location = new System.Drawing.Point(455, 83);
-            this.SaveStudentButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SaveStudentButton.Location = new System.Drawing.Point(834, 153);
+            this.SaveStudentButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SaveStudentButton.Name = "SaveStudentButton";
-            this.SaveStudentButton.Size = new System.Drawing.Size(77, 21);
+            this.SaveStudentButton.Size = new System.Drawing.Size(141, 39);
             this.SaveStudentButton.TabIndex = 3;
             this.SaveStudentButton.Text = "Save";
             this.SaveStudentButton.UseVisualStyleBackColor = true;
@@ -184,24 +163,27 @@
             // 
             // NameInput
             // 
-            this.NameInput.Location = new System.Drawing.Point(455, 11);
+            this.NameInput.Location = new System.Drawing.Point(834, 20);
+            this.NameInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.NameInput.Name = "NameInput";
-            this.NameInput.Size = new System.Drawing.Size(206, 20);
+            this.NameInput.Size = new System.Drawing.Size(374, 29);
             this.NameInput.TabIndex = 4;
             // 
             // MajorIDInput
             // 
-            this.MajorIDInput.Location = new System.Drawing.Point(455, 49);
+            this.MajorIDInput.Location = new System.Drawing.Point(834, 90);
+            this.MajorIDInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MajorIDInput.Name = "MajorIDInput";
-            this.MajorIDInput.Size = new System.Drawing.Size(206, 20);
+            this.MajorIDInput.Size = new System.Drawing.Size(374, 29);
             this.MajorIDInput.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(374, 52);
+            this.label1.Location = new System.Drawing.Point(686, 96);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.Size = new System.Drawing.Size(136, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Enter Major ID";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -209,17 +191,30 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(374, 14);
+            this.label2.Location = new System.Drawing.Point(686, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(115, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Enter Name";
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // majorIDDataGridViewTextBoxColumn
+            // 
+            this.majorIDDataGridViewTextBoxColumn.DataPropertyName = "MajorID";
+            this.majorIDDataGridViewTextBoxColumn.HeaderText = "MajorID";
+            this.majorIDDataGridViewTextBoxColumn.Name = "majorIDDataGridViewTextBoxColumn";
+            // 
             // StudentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 358);
+            this.ClientSize = new System.Drawing.Size(1234, 661);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MajorIDInput);
@@ -228,15 +223,15 @@
             this.Controls.Add(this.FindStudentButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "StudentForm";
             this.Text = "StudentForm";
             this.Load += new System.EventHandler(this.StudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.majorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSetBindingSource)).EndInit();
@@ -259,9 +254,6 @@
         private System.Windows.Forms.BindingSource majorBindingSource;
         private RegistrationDataSetTableAdapters.MajorTableAdapter majorTableAdapter;
         private System.Windows.Forms.BindingSource registrationDataSetBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn majorIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource studentBindingSource2;
         private StudentDataSet studentDataSet;
         private System.Windows.Forms.BindingSource studentsBindingSource;
@@ -270,5 +262,7 @@
         private System.Windows.Forms.TextBox MajorIDInput;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn majorIDDataGridViewTextBoxColumn;
     }
 }
