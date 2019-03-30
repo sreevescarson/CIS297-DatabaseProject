@@ -28,8 +28,7 @@ namespace CollegeRegistration
 
         private void StudentForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'studentDataSet.Students' table. You can move, or remove it, as needed.
-            this.studentsTableAdapter.Fill(this.studentDataSet.Students);
+            
             // TODO: This line of code loads data into the 'registrationDataSet.Major' table. You can move, or remove it, as needed.
             this.majorTableAdapter.Fill(this.registrationDataSet.Major);
             // TODO: This line of code loads data into the 'registrationDataSet.Student' table. You can move, or remove it, as needed.
