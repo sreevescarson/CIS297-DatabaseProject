@@ -8,17 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CollegeRegistration
 {
     public partial class StudentForm : Form
     {
         
-        public StudentForm(RegistrationEntities RegistrationEntities)
+        public StudentForm()
         {
             InitializeComponent();
-            RegistrationEntities.Students.Load();
-            dataGridView1.DataSource = RegistrationEntities.Students.Local.ToBindingList();
+            RegistrationClass.RegistrationEntities.Students.Load();
+            RegistrationClass.RegistrationEntities.Majors.Load();
+            dataGridView1.DataSource = RegistrationClass.RegistrationEntities.Students.Local.ToBindingList();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -43,7 +45,16 @@ namespace CollegeRegistration
 
         private void FindStudentButton_Click(object sender, EventArgs e)
         {
-            string FindPerson = textBox1.Text;
+            string findMajor = textBox1.Text;
+            var MajorFilter = RegistrationClass.RegistrationEntities.Students.Where(f => f.Major.Name == (findMajor)).ToList();
+            //MajorFilter = MajorFilter.Where(f => f.Major.Name ==
+            
+            
+
+            foreach (var Filter in MajorFilter)
+            {
+                Filte+= Filter.Name;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

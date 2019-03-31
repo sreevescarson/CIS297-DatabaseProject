@@ -15,12 +15,12 @@ namespace CollegeRegistration
     public partial class Form1 : Form
     {
 
-        public RegistrationEntities RegistrationEntities;
+        
 
         public Form1()
         {
             InitializeComponent();
-            RegistrationEntities = new RegistrationEntities();
+            
             
 
         }
@@ -40,16 +40,17 @@ namespace CollegeRegistration
             Student NewStudent = new Student
             {
                 Name = "Test",
-                MajorID = 1,
+                MajorID = 2,
             };
 
-            RegistrationEntities.Students.Add(NewStudent);
-            RegistrationEntities.SaveChanges();
+            RegistrationClass.RegistrationEntities.Students.Add(NewStudent);
+            RegistrationClass.RegistrationEntities.SaveChanges();
+            
         }
 
         private void ToStudentFormButton_Click(object sender, EventArgs e)
         {
-            var myForm = new StudentForm(RegistrationEntities);
+            var myForm = new StudentForm();
             myForm.Show();
         }
     }
