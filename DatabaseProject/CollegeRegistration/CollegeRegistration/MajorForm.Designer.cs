@@ -40,8 +40,8 @@
             this.DeleteButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.MajorIDInput = new System.Windows.Forms.TextBox();
-            this.NameInput = new System.Windows.Forms.TextBox();
+            this.CollegeInput = new System.Windows.Forms.TextBox();
+            this.MajorNameInput = new System.Windows.Forms.TextBox();
             this.SaveStudentButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).BeginInit();
@@ -100,9 +100,9 @@
             // 
             // UpdateButton
             // 
-            this.UpdateButton.Location = new System.Drawing.Point(522, 83);
+            this.UpdateButton.Location = new System.Drawing.Point(126, 213);
             this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(62, 23);
+            this.UpdateButton.Size = new System.Drawing.Size(114, 23);
             this.UpdateButton.TabIndex = 19;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = true;
@@ -110,9 +110,9 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(590, 83);
+            this.DeleteButton.Location = new System.Drawing.Point(241, 213);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(64, 23);
+            this.DeleteButton.Size = new System.Drawing.Size(114, 23);
             this.DeleteButton.TabIndex = 18;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
@@ -121,41 +121,43 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(367, 14);
+            this.label2.Location = new System.Drawing.Point(8, 166);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Enter Name";
+            this.label2.Text = "Enter Major Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(367, 52);
+            this.label1.Location = new System.Drawing.Point(8, 190);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.Size = new System.Drawing.Size(101, 13);
             this.label1.TabIndex = 16;
-            this.label1.Text = "Enter Major ID";
+            this.label1.Text = "Enter College Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // MajorIDInput
+            // CollegeInput
             // 
-            this.MajorIDInput.Location = new System.Drawing.Point(448, 49);
-            this.MajorIDInput.Name = "MajorIDInput";
-            this.MajorIDInput.Size = new System.Drawing.Size(206, 20);
-            this.MajorIDInput.TabIndex = 15;
+            this.CollegeInput.Location = new System.Drawing.Point(117, 187);
+            this.CollegeInput.Name = "CollegeInput";
+            this.CollegeInput.Size = new System.Drawing.Size(238, 20);
+            this.CollegeInput.TabIndex = 15;
             // 
-            // NameInput
+            // MajorNameInput
             // 
-            this.NameInput.Location = new System.Drawing.Point(448, 11);
-            this.NameInput.Name = "NameInput";
-            this.NameInput.Size = new System.Drawing.Size(206, 20);
-            this.NameInput.TabIndex = 14;
+            this.MajorNameInput.Location = new System.Drawing.Point(117, 163);
+            this.MajorNameInput.Name = "MajorNameInput";
+            this.MajorNameInput.Size = new System.Drawing.Size(238, 20);
+            this.MajorNameInput.TabIndex = 14;
             // 
             // SaveStudentButton
             // 
-            this.SaveStudentButton.Location = new System.Drawing.Point(448, 83);
+            this.SaveStudentButton.Location = new System.Drawing.Point(11, 213);
             this.SaveStudentButton.Margin = new System.Windows.Forms.Padding(2);
             this.SaveStudentButton.Name = "SaveStudentButton";
-            this.SaveStudentButton.Size = new System.Drawing.Size(69, 23);
+            this.SaveStudentButton.Size = new System.Drawing.Size(114, 23);
             this.SaveStudentButton.TabIndex = 13;
             this.SaveStudentButton.Text = "Save";
             this.SaveStudentButton.UseVisualStyleBackColor = true;
@@ -165,13 +167,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 376);
+            this.ClientSize = new System.Drawing.Size(368, 248);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.MajorIDInput);
-            this.Controls.Add(this.NameInput);
+            this.Controls.Add(this.CollegeInput);
+            this.Controls.Add(this.MajorNameInput);
             this.Controls.Add(this.SaveStudentButton);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -199,8 +201,8 @@
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox MajorIDInput;
-        private System.Windows.Forms.TextBox NameInput;
+        private System.Windows.Forms.TextBox CollegeInput;
+        private System.Windows.Forms.TextBox MajorNameInput;
         private System.Windows.Forms.Button SaveStudentButton;
     }
 }

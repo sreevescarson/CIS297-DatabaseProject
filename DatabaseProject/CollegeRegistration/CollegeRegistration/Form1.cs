@@ -20,38 +20,42 @@ namespace CollegeRegistration
         public Form1()
         {
             InitializeComponent();
-            
-            
-
-        }
-
-        private void AddStudentNameTextbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EnrollmentListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddStudentButton_Click(object sender, EventArgs e)
-        {
-            Student NewStudent = new Student
-            {
-                Name = "Test",
-                MajorID = 1,
-            };
-
-            RegistrationClass.RegistrationEntities.Students.Add(NewStudent);
-            RegistrationClass.RegistrationEntities.SaveChanges();
-            
         }
 
         private void ToStudentFormButton_Click(object sender, EventArgs e)
         {
             var myForm = new StudentForm();
             myForm.Show();
+        }
+
+        private void ToMajorMenuButton_Click(object sender, EventArgs e)
+        {
+            var myForm1 = new MajorForm();
+            myForm1.Show();
+        }
+
+        private void ToEnrollmentMenuButton_Click(object sender, EventArgs e)
+        {
+            var myForm2 = new EnrollmentForm();
+            myForm2.Show();
+        }
+
+        private void ToCourseMenuButton_Click(object sender, EventArgs e)
+        {
+            var myForm3 = new CourseForm();
+            myForm3.Show();
+        }
+
+        private void ToSectionMenuButton_Click(object sender, EventArgs e)
+        {
+            var myForm4 = new SectionForm();
+            myForm4.Show();
+        }
+
+        private void ToFacultyMenuButton_Click(object sender, EventArgs e)
+        {
+            var myForm5 = new FacultyForm();
+            myForm5.Show();
         }
     }
 }

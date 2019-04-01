@@ -54,6 +54,7 @@
             this.ToMajorMenuButton.TabIndex = 47;
             this.ToMajorMenuButton.Text = "Major Menu";
             this.ToMajorMenuButton.UseVisualStyleBackColor = true;
+            this.ToMajorMenuButton.Click += new System.EventHandler(this.ToMajorMenuButton_Click);
             // 
             // ToEnrollmentMenuButton
             // 
@@ -63,6 +64,7 @@
             this.ToEnrollmentMenuButton.TabIndex = 48;
             this.ToEnrollmentMenuButton.Text = "Enrollment Menu";
             this.ToEnrollmentMenuButton.UseVisualStyleBackColor = true;
+            this.ToEnrollmentMenuButton.Click += new System.EventHandler(this.ToEnrollmentMenuButton_Click);
             // 
             // ToCourseMenuButton
             // 
@@ -72,6 +74,7 @@
             this.ToCourseMenuButton.TabIndex = 49;
             this.ToCourseMenuButton.Text = "Course Menu";
             this.ToCourseMenuButton.UseVisualStyleBackColor = true;
+            this.ToCourseMenuButton.Click += new System.EventHandler(this.ToCourseMenuButton_Click);
             // 
             // ToSectionMenuButton
             // 
@@ -81,6 +84,7 @@
             this.ToSectionMenuButton.TabIndex = 50;
             this.ToSectionMenuButton.Text = "Section Menu";
             this.ToSectionMenuButton.UseVisualStyleBackColor = true;
+            this.ToSectionMenuButton.Click += new System.EventHandler(this.ToSectionMenuButton_Click);
             // 
             // ToFacultyMenuButton
             // 
@@ -90,6 +94,7 @@
             this.ToFacultyMenuButton.TabIndex = 51;
             this.ToFacultyMenuButton.Text = "Faculty Menu";
             this.ToFacultyMenuButton.UseVisualStyleBackColor = true;
+            this.ToFacultyMenuButton.Click += new System.EventHandler(this.ToFacultyMenuButton_Click);
             // 
             // Form1
             // 

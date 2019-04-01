@@ -85,7 +85,7 @@ namespace CollegeRegistration
             FilteredDataGrid.DataSource = list;
             FilteredDataGrid.Columns["Major"].Visible = false;
             FilteredDataGrid.Columns["Enrollments"].Visible = false;
-
+            ClearTextBoxes();
             /*
             foreach (var Filter in MajorFilter)
             {
@@ -119,6 +119,8 @@ namespace CollegeRegistration
             {
                 MessageBox.Show("Major ID does not Exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            ClearTextBoxes();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -143,7 +145,8 @@ namespace CollegeRegistration
             {
                 MessageBox.Show("Name cannot be Null or over 50 characters!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
+            ClearTextBoxes();
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
@@ -165,6 +168,14 @@ namespace CollegeRegistration
                 MessageBox.Show("Cannot delete record due to current and/or prior enrollments!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 RegistrationClass.RegistrationEntities.Students.Load();
             }
+
+            ClearTextBoxes();
+        }
+
+        private void ClearTextBoxes()
+        {
+            NameInput.Text = "";
+            MajorIDInput.Text = "";
         }
     }
 }
