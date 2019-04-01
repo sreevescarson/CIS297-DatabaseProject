@@ -40,7 +40,7 @@ namespace CollegeRegistration
             Student NewStudent = new Student
             {
                 Name = "Test",
-                MajorID = 2,
+                MajorID = 1,
             };
 
             RegistrationClass.RegistrationEntities.Students.Add(NewStudent);
