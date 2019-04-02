@@ -73,6 +73,11 @@
     <Compile Include="Course.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CourseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +205,17 @@
     <EmbeddedResource Include="StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CourseDataSet.xsc">
+      <DependentUpon>CourseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CourseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CourseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CourseDataSet.xss">
+      <DependentUpon>CourseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="EnrollmentSectionDataset.xsc">
       <DependentUpon>EnrollmentSectionDataset.xsd</DependentUpon>
     </None>

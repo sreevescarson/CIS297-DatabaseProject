@@ -177,5 +177,10 @@ namespace CollegeRegistration
             NameInput.Text = "";
             MajorIDInput.Text = "";
         }
+
+        private void FilteredDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
