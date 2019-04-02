@@ -17,17 +17,15 @@ namespace CollegeRegistration
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Course()
         {
-            this.Enrollments = new HashSet<Enrollment>();
             this.Sections = new HashSet<Section>();
         }
     
         public int Id { get; set; }
         public string Name { get; set; }
         public int Number { get; set; }
+        public int Credits { get; set; }
         public string Department { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Enrollment> Enrollments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Section> Sections { get; set; }
     }

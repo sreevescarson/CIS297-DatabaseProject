@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 03/30/2019 14:35:03
--- Generated from EDMX file: C:\Users\Sean\Documents\GitHub\CIS297-DatabaseProject\DatabaseProject\CollegeRegistration\CollegeRegistration\RegistrationModel.edmx
+-- Date Created: 04/01/2019 19:17:07
+-- Generated from EDMX file: C:\Users\LtBak\OneDrive\Documents\GitHub\CIS297-DatabaseProject\DatabaseProject\CollegeRegistration\CollegeRegistration\RegistrationModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -18,42 +18,42 @@ GO
 -- --------------------------------------------------
 
 IF OBJECT_ID(N'[dbo].[FK_Enrollment_To_Course]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Enrollments] DROP CONSTRAINT [FK_Enrollment_To_Course];
-GO
-IF OBJECT_ID(N'[dbo].[FK_Section_To_Course]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Sections] DROP CONSTRAINT [FK_Section_To_Course];
+    ALTER TABLE [dbo].[Enrollment] DROP CONSTRAINT [FK_Enrollment_To_Course];
 GO
 IF OBJECT_ID(N'[dbo].[FK_Enrollment_To_Stude]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Enrollments] DROP CONSTRAINT [FK_Enrollment_To_Stude];
+    ALTER TABLE [dbo].[Enrollment] DROP CONSTRAINT [FK_Enrollment_To_Stude];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Section_To_Course]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Section] DROP CONSTRAINT [FK_Section_To_Course];
 GO
 IF OBJECT_ID(N'[dbo].[FK_Section_To_Faculty]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Sections] DROP CONSTRAINT [FK_Section_To_Faculty];
+    ALTER TABLE [dbo].[Section] DROP CONSTRAINT [FK_Section_To_Faculty];
 GO
 IF OBJECT_ID(N'[dbo].[FK_Student_Major]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Students] DROP CONSTRAINT [FK_Student_Major];
+    ALTER TABLE [dbo].[Student] DROP CONSTRAINT [FK_Student_Major];
 GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[Courses]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Courses];
+IF OBJECT_ID(N'[dbo].[Course]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Course];
 GO
-IF OBJECT_ID(N'[dbo].[Enrollments]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Enrollments];
+IF OBJECT_ID(N'[dbo].[Enrollment]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Enrollment];
 GO
-IF OBJECT_ID(N'[dbo].[Faculties]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Faculties];
+IF OBJECT_ID(N'[dbo].[Faculty]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Faculty];
 GO
-IF OBJECT_ID(N'[dbo].[Majors]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Majors];
+IF OBJECT_ID(N'[dbo].[Major]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Major];
 GO
-IF OBJECT_ID(N'[dbo].[Sections]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Sections];
+IF OBJECT_ID(N'[dbo].[Section]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Section];
 GO
-IF OBJECT_ID(N'[dbo].[Students]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Students];
+IF OBJECT_ID(N'[dbo].[Student]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Student];
 GO
 
 -- --------------------------------------------------
@@ -62,7 +62,7 @@ GO
 
 -- Creating table 'Courses'
 CREATE TABLE [dbo].[Courses] (
-    [Id] int IDENTITY(1,1) NOT NULL,
+    [Id] int  NOT NULL,
     [Name] nvarchar(50)  NOT NULL,
     [Number] int  NOT NULL,
     [Department] nvarchar(50)  NOT NULL
@@ -71,7 +71,7 @@ GO
 
 -- Creating table 'Enrollments'
 CREATE TABLE [dbo].[Enrollments] (
-    [Id] int  NOT NULL,
+    [Id] int IDENTITY(1,1) NOT NULL,
     [StudentID] int  NOT NULL,
     [CourseID] int  NOT NULL,
     [Grade] nvarchar(10)  NULL

@@ -66,4 +66,7 @@
     <Build Include="Section.sql" />
     <Build Include="Student.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Registration.refactorlog" />
+  </ItemGroup>
 </Project>

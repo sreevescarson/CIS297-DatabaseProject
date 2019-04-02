@@ -88,6 +88,21 @@
     <Compile Include="EnrollmentForm.Designer.cs">
       <DependentUpon>EnrollmentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EnrollmentSectionDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnrollmentSectionDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollmentSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnrollmentSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollmentStudentSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnrollmentStudentSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Faculty.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
     </Compile>
@@ -185,6 +200,39 @@
     <EmbeddedResource Include="StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="EnrollmentSectionDataset.xsc">
+      <DependentUpon>EnrollmentSectionDataset.xsd</DependentUpon>
+    </None>
+    <None Include="EnrollmentSectionDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnrollmentSectionDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnrollmentSectionDataset.xss">
+      <DependentUpon>EnrollmentSectionDataset.xsd</DependentUpon>
+    </None>
+    <None Include="EnrollmentSet.xsc">
+      <DependentUpon>EnrollmentSet.xsd</DependentUpon>
+    </None>
+    <None Include="EnrollmentSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnrollmentSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnrollmentSet.xss">
+      <DependentUpon>EnrollmentSet.xsd</DependentUpon>
+    </None>
+    <None Include="EnrollmentStudentSet.xsc">
+      <DependentUpon>EnrollmentStudentSet.xsd</DependentUpon>
+    </None>
+    <None Include="EnrollmentStudentSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnrollmentStudentSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnrollmentStudentSet.xss">
+      <DependentUpon>EnrollmentStudentSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
