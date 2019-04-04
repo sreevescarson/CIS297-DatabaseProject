@@ -108,5 +108,10 @@ namespace CollegeRegistration
             DepartmentInput.Text = "";
             DepartmentSearch.Text = "";
         }
+
+        private void CourseGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

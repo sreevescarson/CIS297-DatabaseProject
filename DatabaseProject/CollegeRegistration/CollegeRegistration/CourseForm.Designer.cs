@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.CourseGrid = new System.Windows.Forms.DataGridView();
-            this.DepartmentSearch = new System.Windows.Forms.TextBox();
-            this.FindDeptButton = new System.Windows.Forms.Button();
-            this.registrationDataSet = new CollegeRegistration.RegistrationDataSet();
-            this.registrationDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.courseDataSet = new CollegeRegistration.CourseDataSet();
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.courseTableAdapter = new CollegeRegistration.CourseDataSetTableAdapters.CourseTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creditsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.courseDataSet = new CollegeRegistration.CourseDataSet();
+            this.DepartmentSearch = new System.Windows.Forms.TextBox();
+            this.FindDeptButton = new System.Windows.Forms.Button();
+            this.registrationDataSet = new CollegeRegistration.RegistrationDataSet();
+            this.registrationDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.courseTableAdapter = new CollegeRegistration.CourseDataSetTableAdapters.CourseTableAdapter();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,10 +55,10 @@
             this.DepartmentInput = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.CourseGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,47 +78,7 @@
             this.CourseGrid.RowTemplate.Height = 31;
             this.CourseGrid.Size = new System.Drawing.Size(995, 238);
             this.CourseGrid.TabIndex = 0;
-            // 
-            // DepartmentSearch
-            // 
-            this.DepartmentSearch.Location = new System.Drawing.Point(12, 269);
-            this.DepartmentSearch.Name = "DepartmentSearch";
-            this.DepartmentSearch.Size = new System.Drawing.Size(297, 29);
-            this.DepartmentSearch.TabIndex = 1;
-            // 
-            // FindDeptButton
-            // 
-            this.FindDeptButton.Location = new System.Drawing.Point(341, 264);
-            this.FindDeptButton.Name = "FindDeptButton";
-            this.FindDeptButton.Size = new System.Drawing.Size(178, 40);
-            this.FindDeptButton.TabIndex = 2;
-            this.FindDeptButton.Text = "Find Department";
-            this.FindDeptButton.UseVisualStyleBackColor = true;
-            this.FindDeptButton.Click += new System.EventHandler(this.FindDeptButton_Click);
-            // 
-            // registrationDataSet
-            // 
-            this.registrationDataSet.DataSetName = "RegistrationDataSet";
-            this.registrationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // registrationDataSetBindingSource
-            // 
-            this.registrationDataSetBindingSource.DataSource = this.registrationDataSet;
-            this.registrationDataSetBindingSource.Position = 0;
-            // 
-            // courseDataSet
-            // 
-            this.courseDataSet.DataSetName = "CourseDataSet";
-            this.courseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataMember = "Course";
-            this.courseBindingSource.DataSource = this.courseDataSet;
-            // 
-            // courseTableAdapter
-            // 
-            this.courseTableAdapter.ClearBeforeFill = true;
+            this.CourseGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CourseGrid_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -150,6 +110,47 @@
             this.departmentDataGridViewTextBoxColumn.DataPropertyName = "Department";
             this.departmentDataGridViewTextBoxColumn.HeaderText = "Department";
             this.departmentDataGridViewTextBoxColumn.Name = "departmentDataGridViewTextBoxColumn";
+            // 
+            // courseBindingSource
+            // 
+            this.courseBindingSource.DataMember = "Course";
+            this.courseBindingSource.DataSource = this.courseDataSet;
+            // 
+            // courseDataSet
+            // 
+            this.courseDataSet.DataSetName = "CourseDataSet";
+            this.courseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // DepartmentSearch
+            // 
+            this.DepartmentSearch.Location = new System.Drawing.Point(12, 269);
+            this.DepartmentSearch.Name = "DepartmentSearch";
+            this.DepartmentSearch.Size = new System.Drawing.Size(297, 29);
+            this.DepartmentSearch.TabIndex = 1;
+            // 
+            // FindDeptButton
+            // 
+            this.FindDeptButton.Location = new System.Drawing.Point(341, 264);
+            this.FindDeptButton.Name = "FindDeptButton";
+            this.FindDeptButton.Size = new System.Drawing.Size(178, 40);
+            this.FindDeptButton.TabIndex = 2;
+            this.FindDeptButton.Text = "Find Department";
+            this.FindDeptButton.UseVisualStyleBackColor = true;
+            this.FindDeptButton.Click += new System.EventHandler(this.FindDeptButton_Click);
+            // 
+            // registrationDataSet
+            // 
+            this.registrationDataSet.DataSetName = "RegistrationDataSet";
+            this.registrationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // registrationDataSetBindingSource
+            // 
+            this.registrationDataSetBindingSource.DataSource = this.registrationDataSet;
+            this.registrationDataSetBindingSource.Position = 0;
+            // 
+            // courseTableAdapter
+            // 
+            this.courseTableAdapter.ClearBeforeFill = true;
             // 
             // label4
             // 
@@ -285,10 +286,10 @@
             this.Text = "CourseForm";
             this.Load += new System.EventHandler(this.CourseForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CourseGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

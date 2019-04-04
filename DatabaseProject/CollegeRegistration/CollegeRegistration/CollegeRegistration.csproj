@@ -157,6 +157,11 @@
     <Compile Include="Section.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SectionDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SectionDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EnrollmentForm.resx">
       <DependentUpon>EnrollmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacultyForm.resx">
+      <DependentUpon>FacultyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -276,6 +284,17 @@
     </EntityDeploy>
     <None Include="RegistrationModel.edmx.diagram">
       <DependentUpon>RegistrationModel.edmx</DependentUpon>
+    </None>
+    <None Include="SectionDataset.xsc">
+      <DependentUpon>SectionDataset.xsd</DependentUpon>
+    </None>
+    <None Include="SectionDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SectionDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SectionDataset.xss">
+      <DependentUpon>SectionDataset.xsd</DependentUpon>
     </None>
     <None Include="StudentDataSet.xsc">
       <DependentUpon>StudentDataSet.xsd</DependentUpon>
