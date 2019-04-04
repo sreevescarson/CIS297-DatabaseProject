@@ -98,6 +98,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnrollmentSectionDataset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EnrollmentSet.cs">
+      <DependentUpon>EnrollmentSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EnrollmentSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -138,6 +141,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RegistrationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistrationDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="RegistrationModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -282,6 +290,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>RegistrationModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="RegistrationDataSet1.xsc">
+      <DependentUpon>RegistrationDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="RegistrationDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RegistrationDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RegistrationDataSet1.xss">
+      <DependentUpon>RegistrationDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="RegistrationModel.edmx.diagram">
       <DependentUpon>RegistrationModel.edmx</DependentUpon>
     </None>

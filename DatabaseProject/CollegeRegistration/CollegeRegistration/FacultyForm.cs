@@ -19,6 +19,7 @@ namespace CollegeRegistration
         public FacultyForm()
         {
             InitializeComponent();
+            RegistrationClass.RegistrationEntities.Faculties.Load();
             FacultyGrid.DataSource = RegistrationClass.RegistrationEntities.Faculties.Local.ToBindingList();
         }
 
@@ -72,6 +73,18 @@ namespace CollegeRegistration
         {
             PhoneNumberInput.Text = "";
             FacultyNameInput.Text = "";
+        }
+
+        private void FacultyGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FacultyForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'registrationDataSet1.Faculty' table. You can move, or remove it, as needed.
+            this.facultyTableAdapter.Fill(this.registrationDataSet1.Faculty);
+
         }
     }
 }

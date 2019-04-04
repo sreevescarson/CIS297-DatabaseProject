@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.FacultyGrid = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.registrationDataSet1 = new CollegeRegistration.RegistrationDataSet1();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.SaveFacultyButton = new System.Windows.Forms.Button();
@@ -36,17 +42,56 @@
             this.label1 = new System.Windows.Forms.Label();
             this.PhoneNumberInput = new System.Windows.Forms.TextBox();
             this.FacultyNameInput = new System.Windows.Forms.TextBox();
+            this.facultyTableAdapter = new CollegeRegistration.RegistrationDataSet1TableAdapters.FacultyTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // FacultyGrid
             // 
+            this.FacultyGrid.AutoGenerateColumns = false;
             this.FacultyGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FacultyGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn});
+            this.FacultyGrid.DataSource = this.facultyBindingSource;
             this.FacultyGrid.Location = new System.Drawing.Point(13, 13);
             this.FacultyGrid.Name = "FacultyGrid";
             this.FacultyGrid.RowTemplate.Height = 31;
             this.FacultyGrid.Size = new System.Drawing.Size(739, 336);
             this.FacultyGrid.TabIndex = 0;
+            this.FacultyGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FacultyGrid_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            // 
+            // facultyBindingSource
+            // 
+            this.facultyBindingSource.DataMember = "Faculty";
+            this.facultyBindingSource.DataSource = this.registrationDataSet1;
+            // 
+            // registrationDataSet1
+            // 
+            this.registrationDataSet1.DataSetName = "RegistrationDataSet1";
+            this.registrationDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // UpdateButton
             // 
@@ -117,11 +162,16 @@
             this.FacultyNameInput.Size = new System.Drawing.Size(433, 29);
             this.FacultyNameInput.TabIndex = 23;
             // 
+            // facultyTableAdapter
+            // 
+            this.facultyTableAdapter.ClearBeforeFill = true;
+            // 
             // FacultyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1581, 782);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(791, 540);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PhoneNumberInput);
@@ -132,7 +182,10 @@
             this.Controls.Add(this.FacultyGrid);
             this.Name = "FacultyForm";
             this.Text = "FacultyForm";
+            this.Load += new System.EventHandler(this.FacultyForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FacultyGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +201,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox PhoneNumberInput;
         private System.Windows.Forms.TextBox FacultyNameInput;
+        private RegistrationDataSet1 registrationDataSet1;
+        private System.Windows.Forms.BindingSource facultyBindingSource;
+        private RegistrationDataSet1TableAdapters.FacultyTableAdapter facultyTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
     }
 }
