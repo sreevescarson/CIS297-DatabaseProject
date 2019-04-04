@@ -98,6 +98,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnrollmentSectionDataset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EnrollmentSectionSemesterDatasource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnrollmentSectionSemesterDatasource.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EnrollmentSet.cs">
       <DependentUpon>EnrollmentSet.xsd</DependentUpon>
     </Compile>
@@ -242,6 +247,17 @@
     </None>
     <None Include="EnrollmentSectionDataset.xss">
       <DependentUpon>EnrollmentSectionDataset.xsd</DependentUpon>
+    </None>
+    <None Include="EnrollmentSectionSemesterDatasource.xsc">
+      <DependentUpon>EnrollmentSectionSemesterDatasource.xsd</DependentUpon>
+    </None>
+    <None Include="EnrollmentSectionSemesterDatasource.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnrollmentSectionSemesterDatasource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnrollmentSectionSemesterDatasource.xss">
+      <DependentUpon>EnrollmentSectionSemesterDatasource.xsd</DependentUpon>
     </None>
     <None Include="EnrollmentSet.xsc">
       <DependentUpon>EnrollmentSet.xsd</DependentUpon>

@@ -30,6 +30,10 @@ namespace CollegeRegistration
 
         private void EnrollmentForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'enrollmentSectionSemesterDatasource.Section' table. You can move, or remove it, as needed.
+            this.sectionTableAdapter2.Fill(this.enrollmentSectionSemesterDatasource.Section);
+            // TODO: This line of code loads data into the 'sectionDataset.Section' table. You can move, or remove it, as needed.
+            this.sectionTableAdapter1.Fill(this.sectionDataset.Section);
             // TODO: This line of code loads data into the 'enrollmentSectionDataset.Section' table. You can move, or remove it, as needed.
             this.sectionTableAdapter.Fill(this.enrollmentSectionDataset.Section);
             // TODO: This line of code loads data into the 'enrollmentStudentSet.Student' table. You can move, or remove it, as needed.
@@ -41,8 +45,9 @@ namespace CollegeRegistration
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //search by semester and student ID
             int findStudent = int.Parse(FilterStudentBox.Text);
-            var StudentFilter = RegistrationClass.RegistrationEntities.Enrollments.Where(f => f.StudentID == (findStudent)).ToList();
+            var StudentFilter = RegistrationClass.RegistrationEntities.Enrollments.Where(f => f.StudentID == (findStudent) && f.Section.Semester == (SemesterInput.Text) ).ToList();
 
             var list = new BindingList<Enrollment>(StudentFilter);
             FilterStudentGrid.DataSource = list;
@@ -67,6 +72,7 @@ namespace CollegeRegistration
 
             try
             {
+                //extra credit for Semester + studentID filter
                 var CheckFilter = (from enroll in RegistrationClass.RegistrationEntities.Enrollments
                                    where enroll.SectionID == SectionID
                                    where enroll.StudentID == StudentID
@@ -155,6 +161,11 @@ namespace CollegeRegistration
             StudentIdInput.Text = "";
             SectionIdInput.Text = "";
             GradeInput.Text = "";
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

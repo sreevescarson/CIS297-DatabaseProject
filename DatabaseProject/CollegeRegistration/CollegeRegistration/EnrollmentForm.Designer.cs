@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.EnrollmentGrid = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SectionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enrollmentBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.enrollmentSet = new CollegeRegistration.EnrollmentSet();
             this.enrollmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.registrationDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.registrationDataSet = new CollegeRegistration.RegistrationDataSet();
@@ -44,39 +50,45 @@
             this.majorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.majorTableAdapter = new CollegeRegistration.RegistrationDataSetTableAdapters.MajorTableAdapter();
             this.enrollmentBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.enrollmentSet = new CollegeRegistration.EnrollmentSet();
-            this.enrollmentBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.enrollmentTableAdapter1 = new CollegeRegistration.EnrollmentSetTableAdapters.EnrollmentTableAdapter();
             this.IdInput = new System.Windows.Forms.TextBox();
             this.SectionIdInput = new System.Windows.Forms.TextBox();
             this.GradeInput = new System.Windows.Forms.TextBox();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SectionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentIdInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.enrollmentStudentSet = new CollegeRegistration.EnrollmentStudentSet();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTableAdapter = new CollegeRegistration.EnrollmentStudentSetTableAdapters.StudentTableAdapter();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.enrollmentStudentSet = new CollegeRegistration.EnrollmentStudentSet();
+            this.studentTableAdapter = new CollegeRegistration.EnrollmentStudentSetTableAdapters.StudentTableAdapter();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.enrollmentSectionDataset = new CollegeRegistration.EnrollmentSectionDataset();
             this.sectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.enrollmentSectionDataset = new CollegeRegistration.EnrollmentSectionDataset();
             this.sectionTableAdapter = new CollegeRegistration.EnrollmentSectionDatasetTableAdapters.SectionTableAdapter();
-            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.FilterStudentGrid = new System.Windows.Forms.DataGridView();
+            this.SemesterInput = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.sectionDataset = new CollegeRegistration.SectionDataset();
+            this.sectionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sectionTableAdapter1 = new CollegeRegistration.SectionDatasetTableAdapters.SectionTableAdapter();
+            this.enrollmentSectionSemesterDatasource = new CollegeRegistration.EnrollmentSectionSemesterDatasource();
+            this.sectionBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.sectionTableAdapter2 = new CollegeRegistration.EnrollmentSectionSemesterDatasourceTableAdapters.SectionTableAdapter();
+            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Semester = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.EnrollmentGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).BeginInit();
@@ -85,15 +97,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.majorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentStudentSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentStudentSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentSectionDataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentSectionDataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FilterStudentGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionDataset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentSectionSemesterDatasource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // EnrollmentGrid
@@ -112,6 +126,44 @@
             this.EnrollmentGrid.Size = new System.Drawing.Size(814, 340);
             this.EnrollmentGrid.TabIndex = 0;
             this.EnrollmentGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // StudentID
+            // 
+            this.StudentID.DataPropertyName = "StudentID";
+            this.StudentID.HeaderText = "StudentID";
+            this.StudentID.Name = "StudentID";
+            this.StudentID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // SectionID
+            // 
+            this.SectionID.DataPropertyName = "SectionID";
+            this.SectionID.HeaderText = "SectionID";
+            this.SectionID.Name = "SectionID";
+            this.SectionID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Grade
+            // 
+            this.Grade.DataPropertyName = "Grade";
+            this.Grade.HeaderText = "Grade";
+            this.Grade.Name = "Grade";
+            this.Grade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // enrollmentBindingSource4
+            // 
+            this.enrollmentBindingSource4.DataMember = "Enrollment";
+            this.enrollmentBindingSource4.DataSource = this.enrollmentSet;
+            // 
+            // enrollmentSet
+            // 
+            this.enrollmentSet.DataSetName = "EnrollmentSet";
+            this.enrollmentSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // enrollmentBindingSource
             // 
@@ -134,19 +186,19 @@
             // 
             // FindStudentButton
             // 
-            this.FindStudentButton.Location = new System.Drawing.Point(13, 418);
+            this.FindStudentButton.Location = new System.Drawing.Point(510, 373);
             this.FindStudentButton.Name = "FindStudentButton";
-            this.FindStudentButton.Size = new System.Drawing.Size(316, 41);
+            this.FindStudentButton.Size = new System.Drawing.Size(316, 80);
             this.FindStudentButton.TabIndex = 1;
-            this.FindStudentButton.Text = "Filter Student (ID)";
+            this.FindStudentButton.Text = "Filter Student (ID) and Semester";
             this.FindStudentButton.UseVisualStyleBackColor = true;
             this.FindStudentButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // FilterStudentBox
             // 
-            this.FilterStudentBox.Location = new System.Drawing.Point(13, 373);
+            this.FilterStudentBox.Location = new System.Drawing.Point(130, 373);
             this.FilterStudentBox.Name = "FilterStudentBox";
-            this.FilterStudentBox.Size = new System.Drawing.Size(316, 29);
+            this.FilterStudentBox.Size = new System.Drawing.Size(360, 29);
             this.FilterStudentBox.TabIndex = 2;
             // 
             // SaveButton
@@ -191,16 +243,6 @@
             // 
             this.enrollmentBindingSource3.DataMember = "Enrollment";
             this.enrollmentBindingSource3.DataSource = this.registrationDataSetBindingSource;
-            // 
-            // enrollmentSet
-            // 
-            this.enrollmentSet.DataSetName = "EnrollmentSet";
-            this.enrollmentSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // enrollmentBindingSource4
-            // 
-            this.enrollmentBindingSource4.DataMember = "Enrollment";
-            this.enrollmentBindingSource4.DataSource = this.enrollmentSet;
             // 
             // enrollmentTableAdapter1
             // 
@@ -247,34 +289,6 @@
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // StudentID
-            // 
-            this.StudentID.DataPropertyName = "StudentID";
-            this.StudentID.HeaderText = "StudentID";
-            this.StudentID.Name = "StudentID";
-            this.StudentID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // SectionID
-            // 
-            this.SectionID.DataPropertyName = "SectionID";
-            this.SectionID.HeaderText = "SectionID";
-            this.SectionID.Name = "SectionID";
-            this.SectionID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Grade
-            // 
-            this.Grade.DataPropertyName = "Grade";
-            this.Grade.HeaderText = "Grade";
-            this.Grade.Name = "Grade";
-            this.Grade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // StudentIdInput
             // 
@@ -338,20 +352,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(481, 199);
             this.dataGridView1.TabIndex = 14;
             // 
-            // enrollmentStudentSet
-            // 
-            this.enrollmentStudentSet.DataSetName = "EnrollmentStudentSet";
-            this.enrollmentStudentSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "Student";
-            this.studentBindingSource.DataSource = this.enrollmentStudentSet;
-            // 
-            // studentTableAdapter
-            // 
-            this.studentTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn1
             // 
             this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
@@ -366,6 +366,20 @@
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "Student";
+            this.studentBindingSource.DataSource = this.enrollmentStudentSet;
+            // 
+            // enrollmentStudentSet
+            // 
+            this.enrollmentStudentSet.DataSetName = "EnrollmentStudentSet";
+            this.enrollmentStudentSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
@@ -374,8 +388,9 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.sectionBindingSource;
+            this.dataGridViewTextBoxColumn1,
+            this.Semester});
+            this.dataGridView2.DataSource = this.sectionBindingSource2;
             this.dataGridView2.Location = new System.Drawing.Point(933, 298);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
@@ -383,33 +398,19 @@
             this.dataGridView2.Size = new System.Drawing.Size(481, 199);
             this.dataGridView2.TabIndex = 15;
             // 
-            // enrollmentSectionDataset
-            // 
-            this.enrollmentSectionDataset.DataSetName = "EnrollmentSectionDataset";
-            this.enrollmentSectionDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // sectionBindingSource
             // 
             this.sectionBindingSource.DataMember = "Section";
             this.sectionBindingSource.DataSource = this.enrollmentSectionDataset;
             // 
+            // enrollmentSectionDataset
+            // 
+            this.enrollmentSectionDataset.DataSetName = "EnrollmentSectionDataset";
+            this.enrollmentSectionDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // sectionTableAdapter
             // 
             this.sectionTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn2
-            // 
-            this.idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn2.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
-            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "CourseID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "CourseID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // label5
             // 
@@ -438,12 +439,90 @@
             this.FilterStudentGrid.Size = new System.Drawing.Size(813, 250);
             this.FilterStudentGrid.TabIndex = 18;
             // 
+            // SemesterInput
+            // 
+            this.SemesterInput.Location = new System.Drawing.Point(130, 424);
+            this.SemesterInput.Name = "SemesterInput";
+            this.SemesterInput.Size = new System.Drawing.Size(360, 29);
+            this.SemesterInput.TabIndex = 19;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 373);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 25);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Student ID";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 428);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 25);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Semester";
+            // 
+            // sectionDataset
+            // 
+            this.sectionDataset.DataSetName = "SectionDataset";
+            this.sectionDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sectionBindingSource1
+            // 
+            this.sectionBindingSource1.DataMember = "Section";
+            this.sectionBindingSource1.DataSource = this.sectionDataset;
+            // 
+            // sectionTableAdapter1
+            // 
+            this.sectionTableAdapter1.ClearBeforeFill = true;
+            // 
+            // enrollmentSectionSemesterDatasource
+            // 
+            this.enrollmentSectionSemesterDatasource.DataSetName = "EnrollmentSectionSemesterDatasource";
+            this.enrollmentSectionSemesterDatasource.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sectionBindingSource2
+            // 
+            this.sectionBindingSource2.DataMember = "Section";
+            this.sectionBindingSource2.DataSource = this.enrollmentSectionSemesterDatasource;
+            // 
+            // sectionTableAdapter2
+            // 
+            this.sectionTableAdapter2.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn2
+            // 
+            this.idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn2.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "CourseID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "CourseID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // Semester
+            // 
+            this.Semester.DataPropertyName = "Semester";
+            this.Semester.HeaderText = "Semester";
+            this.Semester.Name = "Semester";
+            this.Semester.ReadOnly = true;
+            // 
             // EnrollmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1426, 739);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.SemesterInput);
             this.Controls.Add(this.FilterStudentGrid);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -467,6 +546,8 @@
             this.Text = "EnrollmentForm";
             this.Load += new System.EventHandler(this.EnrollmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.EnrollmentGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).EndInit();
@@ -475,15 +556,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.majorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentStudentSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentStudentSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentSectionDataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentSectionDataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FilterStudentGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionDataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentSectionSemesterDatasource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,10 +617,20 @@
         private EnrollmentSectionDataset enrollmentSectionDataset;
         private System.Windows.Forms.BindingSource sectionBindingSource;
         private EnrollmentSectionDatasetTableAdapters.SectionTableAdapter sectionTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView FilterStudentGrid;
+        private System.Windows.Forms.TextBox SemesterInput;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private SectionDataset sectionDataset;
+        private System.Windows.Forms.BindingSource sectionBindingSource1;
+        private SectionDatasetTableAdapters.SectionTableAdapter sectionTableAdapter1;
+        private EnrollmentSectionSemesterDatasource enrollmentSectionSemesterDatasource;
+        private System.Windows.Forms.BindingSource sectionBindingSource2;
+        private EnrollmentSectionSemesterDatasourceTableAdapters.SectionTableAdapter sectionTableAdapter2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Semester;
     }
 }

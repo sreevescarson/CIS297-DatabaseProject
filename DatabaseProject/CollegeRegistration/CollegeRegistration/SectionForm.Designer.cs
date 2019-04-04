@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.SectionGrid = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sectionDataset = new CollegeRegistration.SectionDataset();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,16 +70,13 @@
             this.courseTableAdapter = new CollegeRegistration.CourseDataSetTableAdapters.CourseTableAdapter();
             this.facultyTableAdapter = new CollegeRegistration.RegistrationDataSetTableAdapters.FacultyTableAdapter();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.sectionDataset = new CollegeRegistration.SectionDataset();
-            this.sectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sectionTableAdapter = new CollegeRegistration.SectionDatasetTableAdapters.SectionTableAdapter();
-            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GradesButton = new System.Windows.Forms.Button();
+            this.GradeDisplay = new System.Windows.Forms.ListBox();
+            this.GradeSectionInput = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.SectionGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionDataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseDataSet)).BeginInit();
@@ -79,8 +84,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectionDataset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // SectionGrid
@@ -101,6 +104,53 @@
             this.SectionGrid.Size = new System.Drawing.Size(1008, 366);
             this.SectionGrid.TabIndex = 0;
             this.SectionGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn2
+            // 
+            this.idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn2.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // courseIDDataGridViewTextBoxColumn
+            // 
+            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
+            this.courseIDDataGridViewTextBoxColumn.HeaderText = "CourseID";
+            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
+            // 
+            // facultyIDDataGridViewTextBoxColumn
+            // 
+            this.facultyIDDataGridViewTextBoxColumn.DataPropertyName = "FacultyID";
+            this.facultyIDDataGridViewTextBoxColumn.HeaderText = "FacultyID";
+            this.facultyIDDataGridViewTextBoxColumn.Name = "facultyIDDataGridViewTextBoxColumn";
+            // 
+            // dayDataGridViewTextBoxColumn
+            // 
+            this.dayDataGridViewTextBoxColumn.DataPropertyName = "Day";
+            this.dayDataGridViewTextBoxColumn.HeaderText = "Day";
+            this.dayDataGridViewTextBoxColumn.Name = "dayDataGridViewTextBoxColumn";
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            // 
+            // semesterDataGridViewTextBoxColumn
+            // 
+            this.semesterDataGridViewTextBoxColumn.DataPropertyName = "Semester";
+            this.semesterDataGridViewTextBoxColumn.HeaderText = "Semester";
+            this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
+            // 
+            // sectionBindingSource
+            // 
+            this.sectionBindingSource.DataMember = "Section";
+            this.sectionBindingSource.DataSource = this.sectionDataset;
+            // 
+            // sectionDataset
+            // 
+            this.sectionDataset.DataSetName = "SectionDataset";
+            this.sectionDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label4
             // 
@@ -362,59 +412,38 @@
             this.dataGridView3.Location = new System.Drawing.Point(12, 502);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 31;
-            this.dataGridView3.Size = new System.Drawing.Size(1008, 366);
+            this.dataGridView3.Size = new System.Drawing.Size(559, 366);
             this.dataGridView3.TabIndex = 35;
-            // 
-            // sectionDataset
-            // 
-            this.sectionDataset.DataSetName = "SectionDataset";
-            this.sectionDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sectionBindingSource
-            // 
-            this.sectionBindingSource.DataMember = "Section";
-            this.sectionBindingSource.DataSource = this.sectionDataset;
             // 
             // sectionTableAdapter
             // 
             this.sectionTableAdapter.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn2
+            // GradesButton
             // 
-            this.idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn2.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
-            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.GradesButton.Location = new System.Drawing.Point(578, 442);
+            this.GradesButton.Name = "GradesButton";
+            this.GradesButton.Size = new System.Drawing.Size(316, 41);
+            this.GradesButton.TabIndex = 37;
+            this.GradesButton.Text = "Show Grades For Section";
+            this.GradesButton.UseVisualStyleBackColor = true;
+            this.GradesButton.Click += new System.EventHandler(this.GradesButton_Click);
             // 
-            // courseIDDataGridViewTextBoxColumn
+            // GradeDisplay
             // 
-            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
-            this.courseIDDataGridViewTextBoxColumn.HeaderText = "CourseID";
-            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
+            this.GradeDisplay.FormattingEnabled = true;
+            this.GradeDisplay.ItemHeight = 24;
+            this.GradeDisplay.Location = new System.Drawing.Point(578, 502);
+            this.GradeDisplay.Name = "GradeDisplay";
+            this.GradeDisplay.Size = new System.Drawing.Size(527, 364);
+            this.GradeDisplay.TabIndex = 38;
             // 
-            // facultyIDDataGridViewTextBoxColumn
+            // GradeSectionInput
             // 
-            this.facultyIDDataGridViewTextBoxColumn.DataPropertyName = "FacultyID";
-            this.facultyIDDataGridViewTextBoxColumn.HeaderText = "FacultyID";
-            this.facultyIDDataGridViewTextBoxColumn.Name = "facultyIDDataGridViewTextBoxColumn";
-            // 
-            // dayDataGridViewTextBoxColumn
-            // 
-            this.dayDataGridViewTextBoxColumn.DataPropertyName = "Day";
-            this.dayDataGridViewTextBoxColumn.HeaderText = "Day";
-            this.dayDataGridViewTextBoxColumn.Name = "dayDataGridViewTextBoxColumn";
-            // 
-            // timeDataGridViewTextBoxColumn
-            // 
-            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
-            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
-            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
-            // 
-            // semesterDataGridViewTextBoxColumn
-            // 
-            this.semesterDataGridViewTextBoxColumn.DataPropertyName = "Semester";
-            this.semesterDataGridViewTextBoxColumn.HeaderText = "Semester";
-            this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
+            this.GradeSectionInput.Location = new System.Drawing.Point(578, 397);
+            this.GradeSectionInput.Name = "GradeSectionInput";
+            this.GradeSectionInput.Size = new System.Drawing.Size(316, 29);
+            this.GradeSectionInput.TabIndex = 39;
             // 
             // SectionForm
             // 
@@ -422,6 +451,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1604, 882);
+            this.Controls.Add(this.GradeSectionInput);
+            this.Controls.Add(this.GradeDisplay);
+            this.Controls.Add(this.GradesButton);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.FilterSemesterBox);
             this.Controls.Add(this.FilterSemesterButton);
@@ -449,6 +481,8 @@
             this.Text = "SectionForm";
             this.Load += new System.EventHandler(this.SectionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SectionGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionDataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseDataSet)).EndInit();
@@ -456,8 +490,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectionDataset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,5 +539,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn semesterDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button GradesButton;
+        private System.Windows.Forms.ListBox GradeDisplay;
+        private System.Windows.Forms.TextBox GradeSectionInput;
     }
 }
