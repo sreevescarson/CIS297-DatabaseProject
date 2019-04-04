@@ -74,6 +74,9 @@
             this.GradesButton = new System.Windows.Forms.Button();
             this.GradeDisplay = new System.Windows.Forms.ListBox();
             this.GradeSectionInput = new System.Windows.Forms.TextBox();
+            this.FacultyNameSearch = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SectionGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectionDataset)).BeginInit();
@@ -383,16 +386,16 @@
             // 
             // FilterSemesterBox
             // 
-            this.FilterSemesterBox.Location = new System.Drawing.Point(12, 397);
+            this.FilterSemesterBox.Location = new System.Drawing.Point(12, 440);
             this.FilterSemesterBox.Name = "FilterSemesterBox";
-            this.FilterSemesterBox.Size = new System.Drawing.Size(316, 29);
+            this.FilterSemesterBox.Size = new System.Drawing.Size(269, 29);
             this.FilterSemesterBox.TabIndex = 34;
             // 
             // FilterSemesterButton
             // 
-            this.FilterSemesterButton.Location = new System.Drawing.Point(12, 442);
+            this.FilterSemesterButton.Location = new System.Drawing.Point(12, 475);
             this.FilterSemesterButton.Name = "FilterSemesterButton";
-            this.FilterSemesterButton.Size = new System.Drawing.Size(316, 41);
+            this.FilterSemesterButton.Size = new System.Drawing.Size(560, 41);
             this.FilterSemesterButton.TabIndex = 33;
             this.FilterSemesterButton.Text = "Filter Semester";
             this.FilterSemesterButton.UseVisualStyleBackColor = true;
@@ -409,7 +412,7 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(12, 502);
+            this.dataGridView3.Location = new System.Drawing.Point(13, 536);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 31;
             this.dataGridView3.Size = new System.Drawing.Size(559, 366);
@@ -421,7 +424,7 @@
             // 
             // GradesButton
             // 
-            this.GradesButton.Location = new System.Drawing.Point(578, 442);
+            this.GradesButton.Location = new System.Drawing.Point(693, 475);
             this.GradesButton.Name = "GradesButton";
             this.GradesButton.Size = new System.Drawing.Size(316, 41);
             this.GradesButton.TabIndex = 37;
@@ -433,24 +436,52 @@
             // 
             this.GradeDisplay.FormattingEnabled = true;
             this.GradeDisplay.ItemHeight = 24;
-            this.GradeDisplay.Location = new System.Drawing.Point(578, 502);
+            this.GradeDisplay.Location = new System.Drawing.Point(578, 536);
             this.GradeDisplay.Name = "GradeDisplay";
             this.GradeDisplay.Size = new System.Drawing.Size(527, 364);
             this.GradeDisplay.TabIndex = 38;
             // 
             // GradeSectionInput
             // 
-            this.GradeSectionInput.Location = new System.Drawing.Point(578, 397);
+            this.GradeSectionInput.Location = new System.Drawing.Point(693, 430);
             this.GradeSectionInput.Name = "GradeSectionInput";
             this.GradeSectionInput.Size = new System.Drawing.Size(316, 29);
             this.GradeSectionInput.TabIndex = 39;
+            // 
+            // FacultyNameSearch
+            // 
+            this.FacultyNameSearch.Location = new System.Drawing.Point(287, 440);
+            this.FacultyNameSearch.Name = "FacultyNameSearch";
+            this.FacultyNameSearch.Size = new System.Drawing.Size(285, 29);
+            this.FacultyNameSearch.TabIndex = 40;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(105, 402);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 25);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Semester";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(372, 402);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(132, 25);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "Faculty Name";
             // 
             // SectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1604, 882);
+            this.ClientSize = new System.Drawing.Size(1604, 968);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.FacultyNameSearch);
             this.Controls.Add(this.GradeSectionInput);
             this.Controls.Add(this.GradeDisplay);
             this.Controls.Add(this.GradesButton);
@@ -542,5 +573,8 @@
         private System.Windows.Forms.Button GradesButton;
         private System.Windows.Forms.ListBox GradeDisplay;
         private System.Windows.Forms.TextBox GradeSectionInput;
+        private System.Windows.Forms.TextBox FacultyNameSearch;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

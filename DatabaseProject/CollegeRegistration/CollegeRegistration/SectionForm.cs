@@ -80,8 +80,10 @@ namespace CollegeRegistration
         
         private void FilterSemesterButton_Click(object sender, EventArgs e)
         {
+            //Extra Credit
             string findSection = FilterSemesterBox.Text;
-            var SectionFilter = RegistrationClass.RegistrationEntities.Sections.Where(f => f.Semester == (findSection)).ToList();
+            string findFacultyName = FacultyNameSearch.Text;
+            var SectionFilter = RegistrationClass.RegistrationEntities.Sections.Where(f => f.Semester == (findSection) && f.Faculty.Name == (findFacultyName) ).ToList();
 
             var list = new BindingList<Section>(SectionFilter);
             dataGridView3.DataSource = list;
@@ -236,7 +238,7 @@ namespace CollegeRegistration
 
                 GradeDisplay.DataSource = GradeList;
 
-                MessageBox.Show("Thank you for the extra credit :)", "You guys did a Fantastic Job!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Thank you for the extra credit :)", "You guys did a Fantastic Job!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 ClearTextBoxes();
             }
